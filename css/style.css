@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Spirax&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
+body{
+    background-color: #182D09;
+    color: #F3FFB6;
+    background-image: url("../assets/screen.png");
+      background-repeat: no-repeat;
+    
+}
+
+
+h1{
+    font-family: "Spirax", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px;
+    margin-left:15%;
+    margin-bottom: 0;
+    margin-top:5%;
+}
+
+h2{
+    font-family: "Spirax", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36px;
+    margin-left:15%;
+    margin-top:0;
+}
+
+
+
+p{
+    font-family: "Goudy Bookletter 1911", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:20px;
+    width:300px;
+
+}
+
+
+#left{
+ width:175.04px;
+ height:146px;
+
+}
+
+#right{
+
+width:129.44px;
+height:144px;
+}
+
+#nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+#text{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+canvas{
+    display:block;
+    margin:auto;
+    z-index=-1; /*this mean layer down*/
+}
+
+h3{
+    position:fixed;
+    left:50%;
+    bottom:20px;
+}
+
