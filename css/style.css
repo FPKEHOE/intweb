@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Spirax&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
 body{
-    background-color: #182D09;
+ /*   background-color: #182D09;*/
     color: #F3FFB6;
-    background-image: url("../assets/screen.png");
+ /*  background-image: url("../assets/screen.png");*/
       background-repeat: no-repeat;
     
 }
+
+
 
 
 h1{

@@ -1,6 +1,3 @@
-var wid;
-var hei;
-
 var i;
 
 var a;
@@ -11,10 +8,14 @@ var e;
 var f;
 var imgs=[];
 
-var yomama=[];
+var poem=[];
 
 var goudy;
 var spirax;
+
+
+var stamping;
+
 
 function preload(){
   a=loadImage("assets/eggflower1.png");
@@ -32,22 +33,31 @@ function preload(){
 }
 
 function setup() {
-  wid=400;
-  hei=400;
+  createCanvas(windowWidth, windowHeight);
   background('#182D09');
-  createCanvas(wid, hei);
   imgs=[a,b,c,d,e,f];
   i=0;
+  stamping=createGraphics(width, height);
+  stamping.background('#182D09');
+  
 }
 
-function draw() {
-  background('#182D09');
+function draw() {  
+  imageMode(CORNER);
+  image(stamping, 0, 0);
   textAlign(CENTER,CENTER);
-  fill("#F3FFB6");
-  textSize(40)
+  fill('#182D09');
+ // fill(0,0,0,0);
+  stroke('#FFC800');
+   //fill('#FFC800');
+  //stroke('#182D09');
+  strokeWeight(3);
+  textSize(40);
   textFont(spirax);
-  text(poem[i],mouseX,mouseY);
+  text(poem[i],mouseX,mouseY);  
+  noCursor();
 }
+  
 
 
 function mousePressed(){
@@ -63,10 +73,18 @@ function mousePressed(){
 
 function flower(u,v,w,x,y,z,array){
   
-  imageMode(CENTER);
+  
   let current=random(array).get();
   let size=random(100,200)
-  current.resize(size,0);
-  size++;
-  image(current,mouseX,mouseY);
+  stamping.imageMode(CENTER);
+  stamping.image(current,mouseX,mouseY,size,size);
+}
+
+
+
+
+
+function windowResized(){
+  resizeCanvas(windowWidth,windowHeight);
+  
 }
