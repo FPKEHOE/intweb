@@ -3,8 +3,8 @@
 body{
  /*   background-color: #182D09;*/
     color: #F3FFB6;
- /*  background-image: url("../assets/screen.png");*/
-      background-repeat: no-repeat;
+   background-image: url("../assets/screenfull.png");
+    background-repeat: no-repeat;
     
 }
 
@@ -43,20 +43,28 @@ p{
 
 
 #left{
- width:175.04px;
- height:146px;
+
+ width:129.44px;
+height:144px;
+ margin-left:50%;
+ bottom:20px;
 
 }
 
 #right{
-
-width:129.44px;
-height:144px;
+width:175.04px;
+height:146px;
+margin-left:300px;
+bottom:20px;
 }
 
 #nav{
+    margin-top: 500px;
+    margin-left:10%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    position:fixed;
+
 }
 
 #text{
