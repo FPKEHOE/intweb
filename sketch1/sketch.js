@@ -1,211 +1,170 @@
-//Franny Kehoe
 
-var wid;
-var hei;
 
-var a;
+
+
+// ———————————————————
+// ChatGTP Prompt:
+// ———————————————————
+//im setting image to width of 400 (image(img,x,y,400))how do //i make the height proportional to width p5js
+// ———————————————————
+
+
+
+// ———————————————————
+// ChatGTP Response:
+// ———————————————————
+//Great question! If you want to set the image width to 400 and scale the height proportionally, you need to maintain the aspect ratio of the image.
+//Here's how you can do that in p5.js:
+
+//✅ Code Example (Keep Aspect Ratio)
+//javascript
+//CopyEdit
+//let img;
+
+//function preload() {
+//  img = loadImage("your-image.png");
+//}
+
+//function setup() {
+//  createCanvas(600, 600);
+
+ // let newWidth = 400;
+ // let aspectRatio = img.height / img.width;
+ // let newHeight = newWidth * aspectRatio;
+
+ // image(img, 100, 100, newWidth, newHeight);
+//}
+
+//🔍 Explanation:
+//* aspectRatio = img.height / img.width gives you the //proportion of height to width.
+//* Then you multiply your desired width (400) by that ratio //to get the new height.
+//This way, the image scales exactly to 400 pixels wide, and the height adjusts proportionally to keep it from looking stretched or squished.
+
+
+
+
+
+var c = 0;
+var i=0;
 var b;
-var c;
-var d;
-var e;
-var f;
-var imgs1=[];
-var imgs2=[];
-var imgs3=[];
-
-var sweetwid;
-var imposwid
-var blossomwid;
-
-var words=[];
+var l;
+var o;
+var s;
+var m;
+var blossom=[];
+var clicked;
 
 
+var y;
+var x;
+var xx;
 
-var wordx1;
-var wordy1;
-var wordx2;
-var wordy2;
-var wordx3;
-var wordy3;
+var r;
 
-var x1;
-var x1;
-var y1;
-var y1;
-var x2;
-var x2;
-var y2;
-var y2;
-var x3;
-var x3;
-var y3;
-var y3;
+// lines 68-70 used ChatGTP-see entire prompt above
+var newWidth;//
+var newHeight;//
+var aspectRatio;//
 
 
-//var for sweet origins
-//var for impos orgiins
-//var for blossom orgins
 
-var goudy;
-var spirax;
 
 function preload(){
-  a=loadImage("assets/eggflower1.png");
-  b=loadImage("assets/eggflower2.png");
-  c=loadImage("assets/eggflower3.png");
-  d=loadImage("assets/eggflower4.png");
-  e=loadImage("assets/eggflower5.png");
-  f=loadImage("assets/eggflower6.png");
-  
   goudy=loadFont("assets/goudy.ttf");
   spirax=loadFont("assets/spirax.ttf");
-
+  
+  b=loadImage("assets/b.gif");
+  l=loadImage("assets/l.gif");
+  o=loadImage("assets/o.gif");
+  s=loadImage("assets/s.gif");
+  m=loadImage("assets/m.gif");
 }
 
 function setup() {
-//  wid=400;
-  wid=windowWidth;
- // hei= 400;
-  hei=windowHeight;
- 
-  wordx1=wid*(2/9);
-  wordy1=hei*(1.5/9);
-  wordx2=wid*(4.5/9);
-  wordy2=hei*(3/9);
-  wordx3=wid*(6/9);
-  wordy3=hei*(4.5/9);
+  createCanvas(1150, 742);
+  blossom=[b,l,o,s,s,o,m]
 
-  x1=wid*(0.9/9);
-  y1=hei*(1.5/9);
-  w1=wid*(2.25/9);
-  h1=hei*(0.9/9);
-
-  x2=wid*(2.3625/9);
-  y2=hei*(3.15/9);
-  w2=wid*(4.5/9);
-  h2= hei*(0.9/9);
-
-  x3=wid*(4.275/9);
-  y3=hei*(4.545/9);
-  w3=wid*(3.375/9);
-  h3=hei*(0.9/9);
-
+  clicked=false;
   
+  y=height;
+  x=13;
   
-  
-  createCanvas(wid, hei);
-  background('#182D09');
-  imgs1=[a,b];
-  imgs2=[c,d];
-  imgs3=[e,f];
-// noSmooth();
-  
-  words=["sweet","impossible","blossom"];
-  sweetwid=textWidth(words[0]);
-  imposwid=textWidth(words[1]);
-  blossomwid=textWidth(words[3]);
-
+  r=0;
 }
+
+
 
 function draw() {
-poem(
+  background('#182D09');
+  imageMode(CORNER);
   
-)
 
-
-}
-
-
-
-function mousePressed(){
-  flower(a,b,c,d,e,f,imgs1,imgs2,imgs3);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-function poem(xa,ya,xb,yb,xc,yc){
-    textAlign(CENTER,TOP);
-  fill("#F3FFB6");
-  textFont(spirax);
-  textSize(40);
-  text(words[0],wordx1,wordy1);
-  text(words[1],wordx2,wordy2);
-  text(words[2],wordx3,wordy3);
-  
-  // rect(wid*(0.9/9),  hei*(1.5/9), wid*(2.25/9),  hei*(0.9/9));
- // rect(wid*(2.3625/9),  hei*(3.15/9), wid*(4.5/9),  hei*(0.9/9));
-//rect(wid*(4.275/9),  hei*(4.545/9), wid*(3.375/9),  hei*(0.9/9));
-
-  
-  
-}
-
-
-
-
-
-
-
-
-
-
-function flower(u,v,w,x,y,z,array1,array2,array3){
-  imageMode(CENTER);    
-      let current;
-      let size=random(100,200)
- 
-
-        
-  if ((mouseX>x1&&mouseX<=x1+w1)&&(mouseY>y1&&mouseY<=y1+h1)){
-
-      let amountarray=[1,2,3];
-      let amount=random(amountarray);
-
-      for (let i = 0; i < amount; i++) {
-          current=random(array1).get();
-          size=random(100,200);
-          current.resize(size,0);
-          image(current,random(0,wid),random(0,hei)); 
-      }
-    }
-  
-   if ((mouseX>x2&&mouseX<=x2+w2)&&(mouseY>y2&&mouseY<=y2+h2)){
-  
-      let amountarray=[1,2,3];
-      let amount=random(amountarray);
-
-      for (let i = 0; i < amount; i++) {
-          current=random(array2).get();
-          size=random(100,200);
-          current.resize(size,0);
-          image(current,random(0,wid),random(0,hei)); 
-      }
-    }
-  
-  
-    if ((mouseX>x3&&mouseX<=x3+w3)&&(mouseY>y3&&mouseY<=y3+h3)){
-  
-      let amountarray=[1,2,3];
-      let amount=random(amountarray);
-
-      for (let i = 0; i < amount; i++) {
-         // current=array[random(0,1)].get();
-        current=random(array3).get();
-          size=random(100,200);
-          current.resize(size,0);
-          image(current,random(0,wid),random(0,hei)); 
-      }
-    }
+    
+    if (y>-300){
       
+      // lines 120-122 used ChatGTP-see entire prompt above
+      newWidth = 500;
+      aspectRatio = blossom[i].height / blossom[i].width;
+      newHeight = newWidth * aspectRatio;
+        
+      
+      
+      if (clicked==false){
+        image(blossom[i],x,y,newWidth,newHeight);
+        blossom[i].setFrame(0);
+      }
+
+      else{
+        image(blossom[i],x,y,newWidth,newHeight);
+        blossom[i].setFrame(c);
+        c++;
+
+        if (c>25){
+          clicked=false;
+          c=0;
+          
+          
+          if(r<6){
+            x=x+((1/11)*width);
+            r++;
+          }
+          else{
+            x=13;
+            r=0;
+          }
+
+          if (i<blossom.length-1){
+            i++;
+          }
+          else{
+            i=0;
+          }
+          y=height;
+        } 
+      }
+        
+      if(clicked==false){
+        y=y-2;
+      }
+    }
+    else{
+      y=height;
+    }
+
+
+  
+
+  
+  
+  
 }
+  
+ function mousePressed() {
+   if(((mouseX>=x)&&(mouseX<=(x+newWidth)))&&((mouseY>=y)&&(mouseY<=(y+newHeight)))){
+     clicked=true;
+   }
+ }
+
+
+
 

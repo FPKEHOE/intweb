@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Spirax&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
 body{
- /*   background-color: #182D09;*/
-    color: #F3FFB6;
-   background-image: url("../assets/screenfull.png");
-    background-repeat: no-repeat;
+    background-color: #182D09;
+    //color: #F3FFB6;
+ //  background-image: url("../assets/screenfull.png");
+   // background-repeat: no-repeat;
     
 }
 
@@ -20,6 +20,7 @@ h1{
     margin-bottom: 0;
     margin-top:5%;
 }
+
 
 h2{
     font-family: "Spirax", system-ui;
@@ -67,22 +68,49 @@ bottom:20px;
 
 }
 
+#frame{
+    position:fixed;
+    z-index:9999;
+
+}
+
 #text{
     display: flex;
     justify-content: space-around;
 }
 
+/*chat gtp: i asked "how to get frame image be above everyything html css"*/
 
 
-canvas{
-    display:block;
-    margin:auto;
-    z-index=-1; /*this mean layer down*/
-}
+.frame {
+    position: fixed; /* Or absolute */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Allows clicks to pass through */
+    z-index: 9999; /* High value to stay on top */
+  }
+
+  .frame img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensures it fills the whole screen */
+  }
+
+  
+/*end of chat gtp*/
+
 
 h3{
     position:fixed;
     left:50%;
     bottom:20px;
+}
+
+#sketch{
+    display:block;
+    margin;auto;
+    z-index:1;
 }
 
