@@ -16,9 +16,9 @@ h1{
     font-weight: 400;
     font-style: normal;
     font-size: 48px;
-    margin-left:15%;
+    margin-left:8%;
     margin-bottom: 0;
-    margin-top:5%;
+    margin-top:15%;
 }
 
 
@@ -27,7 +27,7 @@ h2{
     font-weight: 400;
     font-style: normal;
     font-size: 36px;
-    margin-left:15%;
+    margin-left:10%;
     margin-top:0;
 }
 
@@ -39,7 +39,13 @@ p{
     font-style: normal;
     font-size:20px;
     width:300px;
+}
 
+#text{
+    display: flex;
+    justify-content: left;
+    margin-left: 8%;
+    gap: 100px;
 }
 
 
@@ -94,10 +100,7 @@ p{
 
 }
 
-#text{
-    display: flex;
-    justify-content: space-around;
-}
+
 
 /*chat gtp: i asked "how to get frame image be above everyything html css"*/
 
