@@ -60,23 +60,25 @@ p{
 
   #nav {
     position: fixed;
-    bottom: 10px; /* 20px from bottom of screen */
+    bottom: 90px; /* 20px from bottom of screen */
     left: 50%;
     transform: translateX(-720px); /* Half of 1440 to center the nav */
     width: 1440px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 0 25px; /* Added padding for better spacing */
    /* background-color: #fff;*/ /* Background color for visibility */
     z-index: 10000;
     pointer-events: auto;
     align-items: flex-end; /* This makes images align to the bottom */
+    gap: 650px;
+
 
     
   }
   
   #left {
-    width: 129.44px;
+    width:100px;
     height: auto;
     margin: 0;
   /*  background-color: #d0d0d0; *//* Example background color */
@@ -84,7 +86,7 @@ p{
   }
   
   #right {
-    width: 129.04px;
+    width: 120px;
     height: auto;
     margin: 0;
   /*  background-color: #d0d0d0; *//* Example background color */
