@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
 body{
     background-color: #182D09;
-    //color: #F3FFB6;
- //  background-image: url("../assets/screenfull.png");
-   // background-repeat: no-repeat;
+    /*color: #F3FFB6;
+   background-image: url("../assets/screenfull.png");
+    background-repeat: no-repeat;*/
     
 }
 
@@ -98,7 +98,7 @@ bottom:20px;
     object-fit: cover; /* Ensures it fills the whole screen */
   }
 
-  
+
 /*end of chat gtp*/
 
 
