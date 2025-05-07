@@ -81,8 +81,7 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(1150, 742);
-  blossom=[b,l,o,s,s,o,m]
+  createCanvas(windowWidth*0.8, windowHeight*0.9);    blossom=[b,l,o,s,s,o,m]
 
   clicked=false;
   
@@ -168,3 +167,6 @@ function draw() {
 
 
 
+ function windowResized(){
+  resizeCanvas(windowWidth, windowHeight);
+}

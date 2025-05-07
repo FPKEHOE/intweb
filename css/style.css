@@ -49,58 +49,19 @@ p{
 }
 
 
-/*Chatgtp: I asked "could u fix it for a 900px screen spaced out~#left{margin-left:10px;width:129.44px;height:144px;
-}
-\#right{margin-left:578.52px;width:175.04px;height:146px;
-}
-\#nav {margin-top: 650px;position: fixed;display: flex;justify-content: space-between;width: 100%;z-index: 10000;}
-*/
-
-
-
   #nav {
-    position: fixed;
-    bottom: 90px; /* 20px from bottom of screen */
-    left: 50%;
-    transform: translateX(-720px); /* Half of 1440 to center the nav */
-    width: 1440px;
-    display: flex;
-    justify-content: space-around;
-    padding: 0 25px; /* Added padding for better spacing */
-   /* background-color: #fff;*/ /* Background color for visibility */
+    position: absolute;
+   margin-left: 73vw;
+   margin-top: 65vh;
+
     z-index: 10000;
-    pointer-events: auto;
-    align-items: flex-end; /* This makes images align to the bottom */
-    gap: 650px;
-
-
-    
   }
   
   #left {
     width:100px;
     height: auto;
-    margin: 0;
-  /*  background-color: #d0d0d0; *//* Example background color */
-
   }
-  
-  #right {
-    width: 120px;
-    height: auto;
-    margin: 0;
-  /*  background-color: #d0d0d0; *//* Example background color */
-  }
-  
-  
-  /*end of chatgtp*/
-  
 
-#frame{
-    position:fixed;
-    z-index:9999;
-
-}
 
 
 
@@ -108,20 +69,22 @@ p{
 
 
 .frame {
-    position: fixed; /* Or absolute */
-    top: 0;
-    left: 0;
-    width: 1440px;
-    height: 900px;
-    pointer-events: none; /* Allows clicks to pass through */
-    z-index: 9999; /* High value to stay on top */
-  }
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100vw;    
+  height: 100vh;  
+  pointer-events: none; 
+  z-index: 9999; 
+  overflow: hidden; 
+}
 
-  .frame img {
-    width: 1440px;
-    height: 900px;
-    /*object-fit: cover;*/ /* Ensures it fills the whole screen */
-  }
+.frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: /*cover*/ fill;
+}
+
 
 
 /*end of chat gtp*/
@@ -140,5 +103,17 @@ body {
     margin-left:145px;
     margin-top:82.5px;
 
+}
+
+
+#sk{
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+}
+
+
+#sketch{
+  margin:auto;
 }
 

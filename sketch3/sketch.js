@@ -150,7 +150,7 @@ var spirax;
 
 var stamping;
 
-// line 149 used ChatGTP-see entire prompt above
+// line 154 used ChatGTP-see entire prompt above
 var growing=[]; 
 var current;
 var size;
@@ -182,8 +182,7 @@ function preload(){
 
 function setup() {
   speed=3;
-  createCanvas(1150, 735);
-  imgs=[a,b,c,d,e,f];
+  createCanvas(windowWidth, windowHeight);    imgs=[a,b,c,d,e,f];
   i=0;
   stamping=createGraphics(1150, 735);
   stamping.background('#182D09');
@@ -195,7 +194,7 @@ function draw() {
   imageMode(CORNER);
   image(stamping, 0, 0);
 
-// lines 195-202 used ChatGTP-see entire prompt above
+// lines 199-207 used ChatGTP-see entire prompt above
   for (let p = 0; p<growing.length; p++) {
     let obj = growing[p];
 
@@ -221,7 +220,7 @@ function draw() {
 function mouseClicked(){
   current=random(imgs);
   size=random(50,150);
-  //let maxx=random(160,200);
+
   let maxx=size+100;
   thex=mouseX;
   they=mouseY;
@@ -240,6 +239,9 @@ function mousePressed(){
   }
 }
 
+function windowResized(){
+  resizeCanvas(windowWidth, windowHeight);
+}
 
 
 
