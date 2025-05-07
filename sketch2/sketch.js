@@ -4,7 +4,7 @@ var c = 0;
 
 
 function preload(){
-  gif=loadImage("assets/omg.gif");  
+  gif=loadImage("assets/hih.gif");  
 
 }
 
