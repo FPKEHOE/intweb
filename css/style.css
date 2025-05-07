@@ -16,9 +16,11 @@ h1{
     font-weight: 400;
     font-style: normal;
     font-size: 48px;
+    margin:0;
     margin-left:8%;
     margin-bottom: 0;
-    margin-top:15%;
+    
+
 }
 
 
@@ -27,26 +29,47 @@ h2{
     font-weight: 400;
     font-style: normal;
     font-size: 36px;
+    margin:0;
     margin-left:10%;
     margin-top:0;
+    
 }
 
+#yatext{
+  margin-top:25%;
+}
 
+#hey{
+  margin-top:15%;
 
+}
 p{
     font-family: "Goudy Bookletter 1911", serif;
     font-weight: 400;
     font-style: normal;
-    font-size:20px;
-    width:300px;
+    font-size:30px;
+
 }
 
 #text{
     display: flex;
-    justify-content: left;
+    justify-content: row;
     margin-left: 8%;
-    gap: 100px;
+    gap: 60px;
 }
+
+#one{
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+#two{
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
 
 
   #nav {
