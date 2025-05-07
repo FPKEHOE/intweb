@@ -17,10 +17,10 @@ function draw() {
   background('#182D09');
   imageMode(CENTER);
   if(mouseIsPressed){
-    if(c<153){
+    if(c<152){
     c++;}
     //this re-sets it if you go past the last frame in your gif
-    if (c > 153){
+    if (c > 152){
       c = 0;
     }
   }
