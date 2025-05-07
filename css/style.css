@@ -15,10 +15,12 @@ h1{
     font-family: "Spirax", system-ui;
     font-weight: 400;
     font-style: normal;
-    font-size: 48px;
+    font-size: 64px;
     margin:0;
     margin-left:8%;
     margin-bottom: 0;
+
+
     
 
 }
@@ -28,7 +30,7 @@ h2{
     font-family: "Spirax", system-ui;
     font-weight: 400;
     font-style: normal;
-    font-size: 36px;
+    font-size: 35px;
     margin:0;
     margin-left:10%;
     margin-top:0;
@@ -36,7 +38,7 @@ h2{
 }
 
 #yatext{
-  margin-top:25%;
+  margin-top:20%;
 }
 
 #hey{
@@ -47,28 +49,37 @@ p{
     font-family: "Goudy Bookletter 1911", serif;
     font-weight: 400;
     font-style: normal;
-    font-size:30px;
+    line-height: .3;
+    font-size:27px;
 
 }
+
+#pp{
+  line-height: 1.5;
+  width: 70%;
+  font-size:30px;
+  margin: 0;
+  font-family: "Goudy Bookletter 1911", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: auto;
+  margin-bottom: 12%;
+}
+
+
+
+
 
 #text{
     display: flex;
-    justify-content: row;
-    margin-left: 8%;
+    justify-content: column;
+    margin-left: 5%;
+   margin-bottom: 5%;
+    margin-top: 0.5%;
     gap: 60px;
+  
 }
 
-#one{
-  display: flex;
-  align-items: center;
-  gap: 0;
-}
-
-#two{
-  display: flex;
-  align-items: center;
-  gap: 0;
-}
 
 
 
@@ -76,8 +87,14 @@ p{
     position: absolute;
    margin-left: 73vw;
    margin-top: 65vh;
+    z-index: 1000000;
+  }
 
-    z-index: 10000;
+  #navugh{
+    position: absolute;
+    z-index: 1000000;
+    margin-left: 73vw;
+
   }
   
   #left {
